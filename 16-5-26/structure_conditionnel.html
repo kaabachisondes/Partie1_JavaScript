@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structure conditionnelle</title>
+</head>
+<body>
+    <h1>Structure conditionnelle if/else et switch</h1>
+    <!--if/else-->
+    <h2>1 verifie ta note</h2>
+    <!-- champs de saisie pour la note-->
+     <input type="number" id="note" placeholder="Ex 12">
+        <!--bouton pour appeler la fct verifierNote-->
+        <button onclick="verifierNote()">Evaluer</button>
+        <!--zone d'affichage du resultat-->
+        <div  class="resultatNote" id="resultatNote"></div>
+        <!--champs de saisie pour entrer nbr de jour-->
+        <input type="number" id="jour" placeholder="Ex :(1=lundi)">
+        <!--button pour afficher le jour-->
+        <button onclick="verifierJour()">Afficher le jour</button>
+        <!--zone d'affichage du jour-->
+        <div class="resultatJour" id="resultatJour"></div>
+        <!--Integration de javascript-->
+        <script>
+            function verifierNote(){
+                //recuperer la note
+                const note=Number(document.getElementById("note").value);
+                let message="";
+                // condition d'evaluation 
+                if(note >=16){
+                    message="tres bien";
+                }else if(note >=10){
+                    message="admis";
+
+                }else{
+                    message="echec";
+                }
+                //afficher le resultat
+                document.getElementById("resultatNote").textContent = "Votre résultat est: " + message;
+            }
+            function verifierJour(){
+                //recuperer le nombre de jour
+                const jour=Number(document.getElementById("jour").value);
+                let message="";
+                //condition pour afficher le jour
+                switch(jour){
+                    case 1:
+                        message="Lundi";
+                        break;
+                    case 2:
+                        message="Mardi";
+                        break;
+                    case 3:
+                        message="Mercredi";
+                        break;
+                    case 4:
+                        message="Jeudi";
+                        break;
+                    case 5:
+                        message="Vendredi";
+                        break;
+                    case 6:
+                        message="Samedi";
+                        break;
+                    case 7:
+                        message="Dimanche";
+                        break;
+                    default:
+                        message="Nombre de jour invalide. Veuillez entrer un nombre entre 1 et 7.";
+                }
+                //afficher le resultat
+                document.getElementById("resultatJour").textContent = "Le jour correspondant est: " + message;
+
+            }
+
+        </script>
+
+    
+</body>
+</html>

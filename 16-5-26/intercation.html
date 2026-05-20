@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaction avec l'utilisateur</title>
+</head>
+<body>
+    <h1>Bienvenue</h1>
+    <script>
+        // 1:interaction : pour  recuperer des infos de l'utilisateur
+       let nom=prompt("Quel est votre nom ?");
+        let prenom=prompt("Quel est votre prenom ?");
+        let age=prompt("Quel est votre age ?");
+        let ville =prompt("Quelle est votre ville ?");
+        
+        //  2:affichage de ces infos dans la console
+        console.log("Nom: " + nom);
+        console.log("Prenom: " + prenom);   
+        console.log("Age: " + age);
+        console.log("Ville: " + ville);
+        //3:affichage dans une boite l'alerte
+        alert("Bienvenue " + prenom + " " + nom + " de " + ville + " âgé de " + age + " ans !");
+        //4:affichage directement dans la page a eviter
+        document.write("<h2> voici votre profil </h2>");
+        document.write("Bonjour " + prenom + " " + nom + " de " + ville + " âgé de " + age + " ans !");
+        
+
+
+    </script>
+
+
+    
+</body>
+</html>

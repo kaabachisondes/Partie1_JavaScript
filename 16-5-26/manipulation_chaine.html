@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulation de chaînes</title>
+    <style>
+        body{
+            font-family: 'Courier New', Courier, monospace;
+            margin: 20px;
+
+        }
+        .resultat{
+            margin-top: 15px;
+            padding: 10px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manipulation de chaînes</h1>
+    <!--champs de saisie pour entrer un phrase-->
+    <label for="text">Entrez une phrase :</label>
+    <input type="text" id="text" placeholder="Ex: Hello world">
+    <!--bouton qui appelle la fct analyserText-->
+    <button onclick="analyserText()">Analyser</button>
+    <!--zone d'affichage des résultats-->
+    <div class="resultat" id="resultats"></div>
+    <script>
+        function analyserText(){
+            //recuperation de la valeur saisie dans le champs de texte
+            const phrase=document.getElementById("text").value;
+            const resultatsDiv=document.getElementById("resultats");
+            //calculs et transformation sur la chaine 
+            //taille
+            const longueur=phrase.length;
+            // tous en majuscules
+            const majuscules= phrase.toUpperCase();
+            //tous en minuscules
+            const minuscules= phrase.toLowerCase();
+            // premiere lettre en majuscule
+            const premierlettre= phrase.charAt(0);
+            //2eme lettre de la phrase avec majus
+            const deux=phrase.charAt(1).toUpperCase();
+          // affichage des resultats
+          
+            resultatsDiv.innerHTML = `
+            <p><strong>Phrase:</strong> ${phrase}</p><br>
+            <p><strong>Longueur:</strong> ${longueur} </p><br>
+            <p><strong>En majuscules:</strong> ${majuscules} </p><br>
+            <p><strong>En minuscules:</strong> ${minuscules} </p><br>
+            <p><strong>Première lettre:</strong> ${premierlettre} </p>
+            <p><strong>Deuxième lettre en majuscule:</strong> ${deux} </p>
+
+            `;
+            
+
+        
+        }
+
+    </script>
+</body>
+</html>

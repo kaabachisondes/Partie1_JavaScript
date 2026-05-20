@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables et operations</title>
+</head>
+<body>
+    <h1>Bienvenue !</h1>
+    <p>Ouvre le console pour voir les resultats( clic droit =>inspect=>console)</p>
+    <script>
+        // 1 declaration de variable
+        // constante(ne changera pas le nom
+        const nom = "Asma";
+        // variable modifiables
+        let age = 20;
+        let estEtudiant = true;
+        let annee//variable non initialisée
+
+        // 2 affectaion
+        annee=2026;
+
+        //3 affichage dans la console
+        console.log("Nom: " + nom);
+        console.log("Age: " + age);     
+        console.log("Est étudiant: " + estEtudiant);
+        console.log("Année actuelle: " + annee);
+
+        // 4: calcul
+        let anneeNaissance = annee - age;   
+        // 5: affichage du résultat du calcul
+        console.log("Année de naissance: " + anneeNaissance);
+
+        //6 verification si l'utilisateur est majeur ou mineur
+        let estMajeur = age >= 18;
+        console.log("Est majeur: " + estMajeur);
+
+
+
+
+    </script>
+    
+</body>
+</html>

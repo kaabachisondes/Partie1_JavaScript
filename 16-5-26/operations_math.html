@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operations mathématiques</title>
+</head>
+<body>
+    <h1> Exemples de Operations mathématiques en JavaScript</h1>
+    <!--zones ou seront affichés les résultats avec des id-->
+    <div class="resultat" id="addition"></div>
+    <div class="resultat" id="soustraction"></div>  
+    <div class="resultat" id="multiplication"></div>
+    <div class="resultat" id="division"></div>
+    <div class="resultat" id="modulo"></div>
+    <div class="resultat" id="pair"></div>
+    <div class="resultat" id="moyenne"></div>
+    <script>
+        //integration de la logique de calcul dans le script
+        let a = 10;
+        let b = 3;
+        //addition
+        document.getElementById("addition").textContent = "Addition: " +a+ " + " +b+ " = " + (a + b);
+        //soustraction  
+        document.getElementById("soustraction").textContent = "Soustraction: " +a+ " - " +b+ " = " + (a - b);
+        //multiplication
+        document.getElementById("multiplication").textContent = "Multiplication: " +a+ " * " +b+ " = " + (a * b);
+        //division
+        document.getElementById("division").textContent = "Division: " +a+ " / " +b+ " = " + (a / b);
+        //modulo
+        document.getElementById("modulo").textContent = "Modulo: " +a+ " % " +b+ " = " + (a % b);
+        //pair
+        // 1 ere methode pour afficher le message
+        let nombre=8;
+        let textPair=(nombre % 2 === 0) ? "pair" : "impair";
+        document.getElementById("pair").textContent = "Le nombre " +nombre+ " est " +textPair;
+         //2 eme methode pour afficher le message
+        /*let textePair = (nombre % 2 === 0)
+                     ?" Le nombre " + nombre + "est pair " // si le rest est 0
+                     : "Le nombre" +nombre + "est impair";
+    document.getElementById("pair").textContent = textePair;
+
+    // 3 eme methode pour afficher le message 
+ document.getElementById("pair").textContent =
+ (nombre %2 ===0)
+   ?" Le nombre " + nombre + "est pair " // si le rest est 0
+    : "Le nombre" +nombre + "est impair";*/
+      
+        
+        // calcul de la moyenne
+        let note1=16;
+        let note2=12;
+        let note3=17;
+        let moyenne=(note1+note2+note3)/3;
+        document.getElementById("moyenne").textContent = "Moyenne de ces notes est: " +moyenne;
+
+    </script>
+
+
+
+    
+</body>
+</html>
